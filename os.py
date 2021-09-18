@@ -13,6 +13,7 @@ def pwd():
         print("/")
     else:
         print(dir)
+
 def cd(inp):
     try:
         out = inp.replace("cd ", "")
@@ -36,7 +37,7 @@ def cd(inp):
 
 # main loop
 while running:
-    inp = input()
+    inp = input(os.getcwd() + "$ ")
     if inp.startswith("cd"):
         cd(inp)
     elif inp == "pwd":
