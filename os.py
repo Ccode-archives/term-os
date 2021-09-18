@@ -7,12 +7,16 @@ os.chdir("sys")
 root = os.getcwd()
 
 # commands
-def pwd():
+def pwd(silent = False):
     dir = os.getcwd().replace(root, "")
     if dir == "":
-        print("/")
+        if silent == True:
+            print("/")
+        return "/"
     else:
-        print(dir)
+        if silent == True:
+            print(dir)
+        return dir
 
 def cd(inp):
     try:
@@ -37,7 +41,7 @@ def cd(inp):
 
 # main loop
 while running:
-    inp = input(os.getcwd() + "$ ")
+    inp = input(pwd(True) + " $ ")
     if inp.startswith("cd"):
         cd(inp)
     elif inp == "pwd":
