@@ -1,2 +1,2 @@
 # term-os
-NA
+A small remake of linux in the terminal.
