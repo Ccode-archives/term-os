@@ -6,6 +6,10 @@ root = os.getcwd()
 
 # commands
 def cd(inp):
+    try:
+        out = inp.replace("cd ", "")
+    except:
+        out = inp.replace("cd", "")
     if inp.startswith("/"):
         try:
             os.chdir(root + inp)
@@ -13,6 +17,7 @@ def cd(inp):
             print("directory does not exist")
     else:
         try:
+            
             os.chdir(inp)
         except:
             print("directory does not exist")
