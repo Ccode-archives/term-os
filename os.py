@@ -12,7 +12,7 @@ def pwd():
     if dir == "":
         print("/")
     else:
-        print("dir")
+        print(dir)
 def cd(inp):
     try:
         out = inp.replace("cd ", "")
