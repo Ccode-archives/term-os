@@ -31,6 +31,8 @@ while running:
     inp = input()
     if inp.startswith("cd"):
         cd(inp)
+    elif inp == "pwd":
+        print(os.getcwd())
     elif inp == "exit":
         running = False
     else:
