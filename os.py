@@ -10,15 +10,15 @@ def cd(inp):
         out = inp.replace("cd ", "")
     except:
         out = inp.replace("cd", "")
-    if inp.startswith("/"):
+    if out.startswith("/"):
         try:
-            os.chdir(root + inp)
+            os.chdir(root + out)
         except:
             print("directory does not exist")
     else:
         try:
             
-            os.chdir(inp)
+            os.chdir(out)
         except:
             print("directory does not exist")
         dir = os.getcwd()
