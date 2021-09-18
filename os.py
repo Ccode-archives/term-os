@@ -10,11 +10,11 @@ root = os.getcwd()
 def pwd(silent = False):
     dir = os.getcwd().replace(root, "")
     if dir == "":
-        if silent == True:
+        if silent == False:
             print("/")
         return "/"
     else:
-        if silent == True:
+        if silent == False:
             print(dir)
         return dir
 
