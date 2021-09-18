@@ -1,6 +1,8 @@
 import os
 running = True
 
+os.chdir("sys")
+
 # const
 root = os.getcwd()
 
@@ -32,7 +34,7 @@ while running:
     if inp.startswith("cd"):
         cd(inp)
     elif inp == "pwd":
-        print(os.getcwd())
+        print(os.getcwd().replace(root, ""))
     elif inp == "exit":
         running = False
     else:
